@@ -46,6 +46,7 @@ Pip (gerenciador de pacotes do Python)
 ## Configure o Envio de E-mail
 
 1.Ative a autenticação em duas etapas no Gmail e crie uma senha de aplicativo.
+
 2.No arquivo App.py, configure as variáveis com suas credenciais do Gmail:
 
 ```seu_email = "seuemail@gmail.com"```
