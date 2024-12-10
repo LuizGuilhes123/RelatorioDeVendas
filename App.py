@@ -59,7 +59,7 @@ Segue o Relatório de vendas por cada loja:
 Qualquer dúvida, estou à disposição.
 
 Atte.,<br>
-Seu Nome meu caro amigo(a)
+Seu nome meu caro amigo(a)
 """
 msg.attach(MIMEText(corpo_email, 'html'))
 
