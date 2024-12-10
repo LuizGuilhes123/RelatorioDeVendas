@@ -3,7 +3,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-
 #Importar base de dados
 tabela_vendas = pd.read_excel('Vendas.xlsx')
 
@@ -24,6 +23,7 @@ print(quantidade)
 print('-' * 50)
 #Ticket médio por produto em cada loja
 ticket_medio = (faturamento['Valor Final'] / quantidade['Quantidade']).to_frame()
+ticket_medio = ticket_medio.rename(columns={0: 'Ticket_Médio'})
 print(ticket_medio)
 
 print('-' * 50)
@@ -48,13 +48,13 @@ Prezados,
 Segue o Relatório de vendas por cada loja:
 
 <b>Faturamento:</b><br>
-{faturamento.to_html()}<br><br>
+{faturamento.to_html(formatters={'Valor Final': 'R${:,.2f}'.format})}<br><br>
 
 <b>Quantidade Vendida:</b><br>
 {quantidade.to_html()}<br><br>
 
 <b>Ticket Médio:</b><br>
-{ticket_medio.to_html()}<br><br>
+{ticket_medio.to_html(formatters={'Ticket_Médio': 'R${:,.2f}'.format})}<br><br>
 
 Qualquer dúvida, estou à disposição.
 
