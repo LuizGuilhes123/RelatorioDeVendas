@@ -33,6 +33,7 @@ Pré-requisitos
 Certifique-se de ter as seguintes ferramentas instaladas:
 
 Python 3.7 ou superior
+
 Pip (gerenciador de pacotes do Python)
 
 ## Clone o Repositório:
